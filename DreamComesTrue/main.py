@@ -29,14 +29,11 @@ def hello_world():
         Runny_nose=int(mydict['Runny_nose'])
         Muscle_sore=int(mydict['Muscle_sore'])
         Sore_throat=int(mydict['Sore_throat'])
-        #
+        
         inputfeatures=[Age,Diabetes,Chd,Cancer,Temprature,Pulse,Sys,Dia,Rr,Sats,Cough,Fever,Diarrhea,Headache,Loss_of_smell,Loss_of_taste,Runny_nose,Muscle_sore,Sore_throat]
         infprob=clf.predict_proba([inputfeatures])[0][1]   
         print(infprob)
-#'age', 'diabetes', 'chd', 'cancer', 'temperature', 'pulse', 'sys',
-#'dia', 'rr', 'sats', 'cough', 'fever', 'diarrhea', 'headache',
-#'loss_of_smell', 'loss_of_taste', 'runny_nose', 'muscle_sore',
-#'sore_throat'    
+ 
         return render_template('show.html',inf=round(infprob*100))
     return render_template('index.html')
 
@@ -44,7 +41,3 @@ if __name__=='__main__':
     app.run(debug=True)   
 
 
-#'age', 'diabetes', 'chd', 'cancer', 'temperature', 'pulse', 'sys',
-#'dia', 'rr', 'sats', 'cough', 'fever', 'diarrhea', 'headache',
-#'loss_of_smell', 'loss_of_taste', 'runny_nose', 'muscle_sore',
-#'sore_throat'    

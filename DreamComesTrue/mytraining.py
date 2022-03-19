@@ -1,3 +1,6 @@
+#Machine learning model
+
+# Importing necessary libraries
 import pandas as pd
 import numpy as np
 import pickle
@@ -69,12 +72,7 @@ if __name__=='__main__':
 # performing train-test split
     from sklearn.model_selection import train_test_split
     X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=42)
-
-# Feature scaling 
-    # from sklearn.preprocessing import StandardScaler
-    # StandardScaler=StandardScaler()
-    # X_train=StandardScaler.fit_transform(X_train)
-    # X_test=StandardScaler.fit_transform(X_test)    
+  
 
 # Fitting logistic regression algorithm
     from sklearn.linear_model import LogisticRegression
